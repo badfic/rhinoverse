@@ -42,214 +42,45 @@ a:active {
   color: red;
 } 
 
-.button {
+button {
   background-color: #8B0000;
   border: 2px;
   border-color: #FF0000;
+  border-radius: 10px;
   color: #fff;
-  padding: 18px 28px;
+  padding: 1em;
   text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   display: inline-block;
   font-size: 12px;
 }
 
-.css-typing p {
-  border-right: .15em solid orange;
+.buttonright {
+  background-color: #8B0000;
+  border: 2px;
+  border-color: #FF0000;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1em;
+  margin-left: .5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 12px;
+}
+
+button:disabled{
+    background-color:grey;
+}
+
+.css-typing {
   font-family: "Courier";
   font-size: 14px;
   color: #fff;
   white-space: nowrap;
   overflow: hidden;
-}
-.css-typing p:nth-child(1) {
-  width: 29.3em;
-  -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(2) {
-  width: 15.5em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 3s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(3) {
-  width: 9.3em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay:5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(4) {
-    width: 9.3em;
-  opacity: 0;
-  -webkit-animation: type2 3s steps(40, end);
-  animation: type2 3s steps(40, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 7s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(5) {
-  width: 9.3em;
-  opacity: 0;
-  -webkit-animation: type2 3s steps(20, end);
-  animation: type2 3s steps(20, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 10s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(6) {
-  width: 15.3em;
-  opacity: 0;
-  -webkit-animation: type2 3s steps(20, end);
-  animation: type2 3s steps(20, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 15.5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(7) {
-  width: 18em;
-  opacity: 0;
-  -webkit-animation: type2 3s steps(20, end);
-  animation: type2 3s steps(20, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 19s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-@keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    border: none;
-  }
-}
-
-@-webkit-keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    border: none;
-  }
-}
-
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-
-@-webkit-keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-
-@keyframes type3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes type4 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-@-webkit-keyframes type5 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes type5 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-@-webkit-keyframes blink {
-  50% {
-    border-color: tranparent;
-  }
 }
 
 /* Thick red border */
@@ -336,6 +167,14 @@ body {
   margin-top: 20px;
 }
 
+.prettyfy {
+    padding: 2em;
+}
+
+.whytho {
+    padding: 0em;
+}
+
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {
@@ -345,28 +184,331 @@ body {
 }
 
 </style>
-  </head>
 
-  <body>
-      <div class="card">
-          <h2><a href="/post1.html"><center>HelloGOODBYEworld.txt</center></a></h2>
-          <hr class="fp">
-          <h5><center>7/17/2017 // Earth-771 // Los Angeles, CA by <a href="/twitter.html">StatsGurl7</center></a></h5>
-          <hr class="fp">
-          <!--<div class="fakeimg" style="height:77px; width:1200px;">Image</div>-->
-        
-          <div class="css-typing">
-                <p>
-                    Think of the most unlucky person you’ve ever met.                 
-                </p>
-                <p>
-                    <a href="#" button class="button">okay</a> <a href="#" button class="button">no</a>
-                </p>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script>
+    angular.module("cyo", [])
+
+.directive("story", function() {
+    return {
+        restrict: "EA",
+        scope: true,
+        controller: "StoryController",
+    }
+})
+
+.directive("page", function() {
+    return {
+        restrict: "EA",
+        scope: true,
+        controller: "PageController",
+    }
+})
+
+.directive("choice", function() {
+    return {
+        restrict: "EAC",
+        controller: "ChoiceController",
+    }
+})
+
+.directive("event", function() {
+    return {
+        restrict: "EA",
+        // scope: true,
+        controller: "EventController",
+    }
+})
+
+.directive("condition", function() {
+    return {
+        restrict: "EA",
+        controller: "ConditionController",
+    }
+})
+
+.directive("restart", function() {
+    return {
+        restrict: "EA",
+        scope: true,
+        controller: "RestartController",
+    }
+})
+
+
+.controller("StoryController", function($scope, $element) {
+
+    $scope.storyEvents = [];
+    $scope.choices = [];
+    $scope.pages = [];
+    $scope.completedPages = [];
+    $scope.decisions = ['intro'];
+
+    // $scope. = function() {
+    // console.log("Init story...");
+    // }
+
+    // $scope.
+
+    // $scope.init();
+})
+
+.controller("PageController", function($scope, $attrs, $element) {
+
+    if ($scope.pages.length) {
+        $element.css("display", "none");
+    } else {
+        $scope.isFirstPage = true;
+    }
+
+    var pageName = Object.keys($attrs.$attr);
+    if (pageName[0] == "page") pageName.shift();
+
+    $scope.pageName = pageName[0];
+
+    $scope.pages.push(pageName[0]);
+
+    // $scope.isComplete = false;
+
+    $scope.$watch("decisions", function() {
+        if ($scope.decisions.indexOf($scope.pageName) > -1) {
+            $element.css("display", "block");
+        } else if (!$scope.isFirstPage) {
+            $element.css("display", "none");
+        }
+    }, true);
+})
+
+.controller("ChoiceController", function($scope, $attrs, $element) {
+
+    var choiceName = Object.keys($attrs.$attr);
+    if (choiceName[0] === "choice") choiceName.shift();
+
+    angular.element($element).on("click", function() {
+        $scope.completedPages.push($scope.pageName);
+        $scope.decisions.push(choiceName[0]);
+        $scope.$apply();
+    });
+
+    $scope.$watch("pages", function() {
+        if ($scope.pages.indexOf(choiceName[0]) == -1) {
+            console.error("A choice has no corresponding page,", choiceName[0]);
+            $element.css("border", "2px solid red");
+            $element.css("pointer-events", "none");
+        }
+    }, true);
+
+    $scope.$watch("completedPages", function() {
+        if ($scope.completedPages.indexOf($scope.pageName) > -1) {
+            $element.css("display", "none");
+        } else {
+            $element.css("display", "inline-block");
+        }
+    }, true)
+})
+
+.controller("RestartController", function($scope, $attrs, $element) {
+
+    angular.element($element).on("click", function() {
+        [$scope.storyEvents, $scope.decisions, $scope.completedPages].forEach(function(A) {
+            while (A.length > 0) {
+                A.pop();
+            }
+        });
+
+        $scope.$apply();
+    });
+})
+
+
+.controller("EventController", function($scope, $attrs) {
+    var storyEvent = Object.keys($attrs.$attr);
+    var isNegative = false;
+    if (storyEvent[0] === "clear") {
+        isNegative = true;
+        storyEvent.shift();
+    };
+
+    var activated = false;
+
+    function activate() {
+        if (activated) return;
+        activated = true;
+        if ($scope.isCondition && !$scope.conditionValid) {
+            return;
+        };
+
+        console.info("Activating this event", storyEvent, !isNegative);
+
+        if (!isNegative) {
+            $scope.storyEvents.push(storyEvent[0]);
+        } else {
+            var index = $scope.storyEvents.indexOf(storyEvent[0]);
+            $scope.storyEvents.splice(index, 1);
+        };
+    }
+
+    $scope.$watch("decisions", function() {
+        if ($scope.decisions.indexOf($scope.pageName) > -1) {
+            activate();
+        } else {
+            activated = false;
+        }
+    }, true);
+})
+
+.controller("ConditionController", function($scope, $element, $attrs) {
+    $element.css("display", "none");
+    var condition = Object.keys($attrs.$attr);
+    var isNegative = false;
+    var activated = false;
+
+    $scope.isCondition = true;
+
+    if (condition[0] === "unless" || condition[0] === "not") {
+        isNegative = true;
+        condition.shift();
+    };
+
+    function activate() {
+        if (activated) return;
+        activated = true;
+        if ($scope.storyEvents.indexOf(condition[0]) > -1 && !isNegative) {
+            $scope.conditionValid = true;
+            $element.css("display", "block");
+        } else if ($scope.storyEvents.indexOf(condition[0]) == -1 && isNegative) {
+            $scope.conditionValid = true;
+            $element.css("display", "block");
+        }
+    }
+
+    $scope.$watch("decisions", function() {
+        if ($scope.decisions.indexOf($scope.pageName) > -1) {
+            activate();
+        } else {
+            activated = false;
+            $element.css("display", "none");
+        }
+    }, true);
+});
+
+    </script>
+
+</head>
+
+<body ng-app="cyo" class='container'>
+
+       <div class="card">
+            <h2><a href="#"><center>HelloGOODBYEworld.txt</center></a></h2>
+            <hr class="fp">
+            <h5><center>7/17/2017 // Earth-771 // Los Angeles, CA by <a href="twitter.html">StatsGurl7</center></a></h5>
+            <hr class="fp">
+            <!--<div class="fakeimg" style="height:77px; width:1200px;">Image</div>-->
+            <story>
+                <page intro>
+                    <p>Think of the most unlucky person you’ve ever met.</p>
+                    <button choice okay>Okay</button>
+                    <button choice no>No</button>
+                </page>
+                <page okay>
+                    <p>Now, think of the most unlucky thing that has ever happened to them.</p>
+                    <button choice like-what>Like What?</button>
+                    <button choice alright>Alright</button>
+                </page>
+                <page alright>
+                    <p>There is a 23.3333% chance that person’s bad luck is all my fault.</p>
+                    <button choice how-is-that-possible>What? How is that Possible?</button>
+                </page>
+                <page no>
+                    <p>Do it anyway.</p>
+                    <p>I'll wait.</p>
+                    <button choice fine>Fine</button>
+                    <button choice still-no>Still, no</button>
+                </page>
+                <page fine>
+                    <p>Good.</p>
+                    <p>Now, think of the most unlucky thing that has ever happened to them.</p>
+                    <button choice why-no>Why?</button>
+                </page>
+                <page why-no>
+                        <p>Just humor me.</p>
+                        <button choice seriously-why-no>Seriously, Why?</button>
+                </page>
+                <page like-what>
+                    <p>It can be anything.</p>
+                    <p>Maybe they caught the flu the day before their wedding.</p>
+                    <p>Maybe they lost all their money in a casino or at a race track.</p>
+                    <p>Or maybe they got into a plane crash.</p>
+                    <p>...With no survivors.</p>
+                    <button choice wait-what>Wait...what?</button>
+                </page>
+                <page wait-what>
+                        <p>That last one might be a little too hard to think about.</p>
+                        <p>Especially considering what I’m about to tell you.</p>
+                        <button choice seriously-why-no>what is it?</button>
+                        <button choice still-no>No. Don't tell me. I don't want to know.</button>
+                </page>
+                <page seriously-why-no>
+                    <p>Cause there is a 23.3333% chance that person’s bad luck is all my fault.</p>
+                    <button choice how-is-that-possible>Wait. How is that possible?</button>
+                </page>
+                <page how-is-that-possible>
+                    <p><center>Nice to meet you, stranger.</p>
+                    <p>I'm Rhine Tseng.</p>
+                    <p>And I am the most unlucky person on the planet</center></p>
+                    <button choice are-you-serious>You can't be serious.</button>
+                </page>
+                <page are-you-serious>
+                    <p>Chances are when you think of the most unlucky person you know, you’re thinking of someone who has bad stuff happen to them on occasion. 
+                    Maybe they’ve locked their keys in their car four or five times. Maybe they can’t fill out an online form without having to call customer service 
+                    each and every time.</p>
+
+                    <p>Maybe they can never log in to their social media accounts without having to change their password. 
+                        No matter if they’ve saved said password in a password manager or whatever.</p>
+                            
+                    <p><left>Maybe they always lose every time they try to gamble.</left></p>
+                            
+                    <p>I don’t know who you’re thinking of or why you chose that person in particular. I just know my ‘bad luck’ is nothing like that at all.</p>
+                    <button choice w-t-f>What the hell are you even talking about?</button>
+                </page>
+                <page w-t-f>
+                    <p><center>I like to imagine that my luck has a mind of its own.</p>
+                    <p>Because, to be honest? It probably does.</p>
+                    <p><left>Everyone is always going on and on about ‘lady luck’ or whatever.</left></p>
+                    <p>So I have to assume there’s also a lady bad luck.</p>
+                    <p><left>Or a laddie bad luck?</left></p>
+                    <p>(Equal opportunity and feminism and all that)</p></center></p>
+                        <button choice bullshit>Bullshit.</button>
+                        <button choice sure-jan>Suuuure, Jan.</button>
+                </page>
+                <page bullshit>
+                        <p>Wow, rude</p>
+                            <button choice intro>You're rude</button>
+                </page>
+                <page sure-jan>
+                    <p>Anyways, all this to say:</p>
+                        <p>My ‘bad luck’ is more than just bad.</p>
+                        <p>It’s sentient.</p>
+                        <button choice are-you-ok>Are you okay?</button>
+                </page>
+                <page are-you-ok>
+                    <p>I <i>know</i> how weird that sounds. Especially to someone who has no idea who I am or what I’m even talking about, but...my bad luck is alive. 
+                        It doesn’t speak to me or tell me to do bad things or anything that would be (<i>should be?</i>) a red flag or anything, but…</p>
+                        <button choice well>Well...?</button>
+                </page>
+                <page well>
+                        <p>I like to imagine my bad luck is like a cat. I’m sure you’ve seen the videos where a cat is near a water glass or something 
+                        breakable and they reach their paw out and everyone in the room is saying ‘no, cat! Don’t do it!’, but then the cat totally does it?</p>
+                        <p><center>That’s what this is like.</center></p>
+                            <button choice um-ok-cool>Um, okay...</button>
+                            <button choice still-no>Yeah I'm good, you're batshit lady...</button>
+                </page>
                 
-              </div>
+                <page still-no>
+                        <p>[[okay then. Read chapter 1 instead]]</p>
+                    </page>
 
-             <div>     
-              </div>
-            </div>         
-  
-  </body>
+            </story>
+    </div>
+
+</body>

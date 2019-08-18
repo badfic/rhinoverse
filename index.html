@@ -42,7 +42,7 @@ a:active {
   color: red;
 } 
 
-.css-typing p {
+.css-typing {
   border-right: .15em solid orange;
   font-family: "Courier";
   font-size: 14px;
@@ -50,224 +50,33 @@ a:active {
   white-space: nowrap;
   overflow: hidden;
 }
-.css-typing p:nth-child(1) {
-  width: 20.3em;
-  -webkit-animation: type 2s steps(40, end);
-  animation: type 2s steps(40, end);
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(2) {
-  width: 17.5em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(3) {
-  width: 9.3em;
-  opacity: 0;
-  -webkit-animation: type2 2s steps(40, end);
-  animation: type2 2s steps(40, end);
-  -webkit-animation-delay: 2s;
-  animation-delay:5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(4) {
-    width: 9.3em;
-  opacity: 0;
-  -webkit-animation: type2 3s steps(40, end);
-  animation: type2 3s steps(40, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 7s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(5) {
-  width: 9.3em;
-  opacity: 0;
-  -webkit-animation: type2 3s steps(20, end);
-  animation: type2 3s steps(20, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 10s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(6) {
-  width: 15.3em;
-  opacity: 0;
-  -webkit-animation: type2 3s steps(20, end);
-  animation: type2 3s steps(20, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 15.5s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-.css-typing p:nth-child(7) {
-  width: 18em;
-  opacity: 0;
-  -webkit-animation: type2 3s steps(20, end);
-  animation: type2 3s steps(20, end);
-  -webkit-animation-delay: 4s;
-  animation-delay: 19s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-}
-
-@keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    border: none;
-  }
-}
-
-@-webkit-keyframes type {
-  0% {
-    width: 0;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    border: none;
-  }
-}
-
-@keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-
-@-webkit-keyframes type2 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  99.9% {
-    border-right: .15em solid orange;
-  }
-  100% {
-    opacity: 1;
-    border: none;
-  }
-}
-
-@keyframes type3 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes type4 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-
-@-webkit-keyframes type5 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes type5 {
-  0% {
-    width: 0;
-  }
-  1% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-@-webkit-keyframes blink {
-  50% {
-    border-color: tranparent;
-  }
-}
-
 </style>
-  </head>
+</head>
 
-  <body>
-
-        <div class="css-typing">
-                <p>
-                  Rhinoverse v1.0//rhinestone cowgirl 
-                </p>
-                <p>
-                  Establishing connection...
-                </p>
-                <p>
-                  Connecting...
-                </p>
-                <p>
-                        Connecting...
-                      </p>
-                      <p>
-                            Connecting...
-                          </p>
-                <p>
-                  Connection established.
-                </p>
-                <P><a href="/blog.html">Click here</a> to continue...
-                </P>
-              </div>
-
-             <div>              
-  
-  </body>
+<body>
+    <div id="typed-strings">
+        <p>
+            Rhinoverse v1.0//rhinestone cowgirl<br>
+            Establishing connection...
+        </p>
+        <p>Connecting...</p>
+        <p>Connecting</p>
+        <p>Connecting...</p>
+        <p>Connecting</p>
+        <p>Connecting...</p>
+        <p>Connection established.</p>
+    </div>
+    <span class="css-typing" id="typed"></span>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+    <script>
+        new Typed("#typed", {
+            typeSpeed: 50,
+            backSpeed: 40,
+            stringsElement: '#typed-strings',
+            autoInsertCss: false,
+            onComplete: function(self) {
+                window.location = "blog.html"
+            }
+        });
+    </script>
+</body>
