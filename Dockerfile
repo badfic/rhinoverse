@@ -1,2 +1,2 @@
-FROM halverneus/static-file-server:v1.6.5
-COPY . /web
+FROM nginx:1-alpine
+COPY . /usr/share/nginx/html
