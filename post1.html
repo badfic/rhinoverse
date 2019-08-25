@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-rfs/bootstrap-rfs.css">
+
 <style>
 body {background-color: black;
 }
@@ -94,13 +96,13 @@ hr.fp {
 body {
   font-family: 'lucida console';
   color: white;
-  padding: 1%;
+  /* padding: 1%; */
   background: #000;
 }
 
 /* Header/Blog Title */
 .header {
-  padding: 3%;
+  /* padding: 3%; */
   font-size: 1.25em;
   text-align: center;
   background: black;
@@ -111,31 +113,32 @@ body {
 /* Create two unequal columns that floats next to each other */
 /* Left column */
 .leftcolumn {
-  float: right;
-  width: 95%;
+  /* float: right; */
+  /* width: 95%; */
 }
 
 /* Right column */
 .rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 2%;
+  /* float: left; */
+  /* width: 25%; */
+  /* padding-left: 2%; */
 }
 
 /* Fake image */
 .fakeimg {
   background-color: #000;
-  width: 100%;
-  padding: 20px;
+  /* width: 100%; */
+  /* padding: 20px; */
 }
 
 /* Add a card effect for articles */
 .card {
   background-color: black;
-  padding: 10%;
-  margin-top: 7%;
-  margin-left:5%;
-  width:70%;
+  padding: 2.5em;
+  /* margin-top: 7%; */
+  /* margin-left:5%; */
+  /* width:70%; */
+  border-color: white;
   border-style: solid;
   border-width: 1px;
   text-align: left;
@@ -150,10 +153,10 @@ body {
 .social {
   background-color: black;
   text-align: center;
-  padding: 20px;
-  width: 98%;
+  /* padding: 20px; */
+  /* width: 98%; */
   height: 77px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
 /* Clear floats after the columns */
@@ -175,17 +178,17 @@ body {
     padding: 2em;
 }
 
-.whytho {
-    padding: 0em;
-}
+/* .whytho { */
+    /* padding: 0em; */
+/* } */
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {
-    width: 100%;
-    padding: 0;
-  }
-}
+/* @media screen and (max-width: 800px) { */
+  /* .leftcolumn, .rightcolumn { */
+    /* width: 100%; */
+    /* padding: 0; */
+  /* } */
+/* } */
 
 </style>
 
@@ -400,119 +403,132 @@ body {
 
 </head>
 
-<body ng-app="cyo" class='container'>
+<body ng-app="cyo">
 
-       <div class="card">
-            <a href="#"><h3><center>HelloGOODBYEworld.txt</center></h3></a>
-            <hr class="fp">
-            <h5><center>7/17/2017 // Earth-771 // Los Angeles, CA by <a href="twitter.html">StatsGurl7</center></a></h5>
-            <hr class="fp">
-            <!--<div class="fakeimg" style="height:77px; width:1200px;">Image</div>-->
-            <story>
-                <page intro>
-                    <p>Think of the most unlucky person you’ve ever met.</p>
-                    <button choice okay>Okay</button>
-                    <button choice no>No</button>
-                </page>
-                <page okay>
-                    <p>Now, think of the most unlucky thing that has ever happened to them.</p>
-                    <button choice like-what>Like What?</button>
-                    <button choice alright>Alright</button>
-                </page>
-                <page alright>
-                    <p>There is a 23.3333% chance that person’s bad luck is all my fault.</p>
-                    <button choice how-is-that-possible>What? How is that Possible?</button>
-                </page>
-                <page no>
-                    <p>Do it anyway.</p>
-                    <p>I'll wait.</p>
-                    <button choice fine>Fine</button>
-                    <button choice still-no>Still, no</button>
-                </page>
-                <page fine>
-                    <p>Good.</p>
-                    <p>Now, think of the most unlucky thing that has ever happened to them.</p>
-                    <button choice why-no>Why?</button>
-                </page>
-                <page why-no>
-                        <p>Just humor me.</p>
-                        <button choice seriously-why-no>Seriously, Why?</button>
-                </page>
-                <page like-what>
-                    <p>It can be anything.</p>
-                    <p>Maybe they caught the flu the day before their wedding.</p>
-                    <p>Maybe they lost all their money in a casino or at a race track.</p>
-                    <p>Or maybe they got into a plane crash.</p>
-                    <p>...With no survivors.</p>
-                    <button choice wait-what>Wait...what?</button>
-                </page>
-                <page wait-what>
-                        <p>That last one might be a little too hard to think about.</p>
-                        <p>Especially considering what I’m about to tell you.</p>
-                        <button choice seriously-why-no>what is it?</button>
-                        <button choice still-no>No. Don't tell me. I don't want to know.</button>
-                </page>
-                <page seriously-why-no>
-                    <p>Cause there is a 23.3333% chance that person’s bad luck is all my fault.</p>
-                    <button choice how-is-that-possible>Wait. How is that possible?</button>
-                </page>
-                <page how-is-that-possible>
-                    <p><center>Nice to meet you, stranger.</p>
-                    <p>I'm Rhine Tseng.</p>
-                    <p>And I am the most unlucky person on the planet</center></p>
-                    <button choice are-you-serious>You can't be serious.</button>
-                </page>
-                <page are-you-serious>
-                    <p>Chances are when you think of the most unlucky person you know, you’re thinking of someone who has bad stuff happen to them on occasion. 
-                    Maybe they’ve locked their keys in their car four or five times. Maybe they can’t fill out an online form without having to call customer service 
-                    each and every time.</p>
-
-                    <p>Maybe they can never log in to their social media accounts without having to change their password. 
-                        No matter if they’ve saved said password in a password manager or whatever.</p>
-                            
-                    <p><left>Maybe they always lose every time they try to gamble.</left></p>
-                            
-                    <p>I don’t know who you’re thinking of or why you chose that person in particular. I just know my ‘bad luck’ is nothing like that at all.</p>
-                    <button choice w-t-f>What the hell are you even talking about?</button>
-                </page>
-                <page w-t-f>
-                    <p><center>I like to imagine that my luck has a mind of its own.</p>
-                    <p>Because, to be honest? It probably does.</p>
-                    <p><left>Everyone is always going on and on about ‘lady luck’ or whatever.</left></p>
-                    <p>So I have to assume there’s also a lady bad luck.</p>
-                    <p><left>Or a laddie bad luck?</left></p>
-                    <p>(Equal opportunity and feminism and all that)</p></center></p>
-                        <button choice bullshit>Bullshit.</button>
-                        <button choice sure-jan>Suuuure, Jan.</button>
-                </page>
-                <page bullshit>
-                        <p>Wow, rude</p>
-                            <button choice intro>You're rude</button>
-                </page>
-                <page sure-jan>
-                    <p>Anyways, all this to say:</p>
-                        <p>My ‘bad luck’ is more than just bad.</p>
-                        <p>It’s sentient.</p>
-                        <button choice are-you-ok>Are you okay?</button>
-                </page>
-                <page are-you-ok>
-                    <p>I <i>know</i> how weird that sounds. Especially to someone who has no idea who I am or what I’m even talking about, but...my bad luck is alive. 
-                        It doesn’t speak to me or tell me to do bad things or anything that would be (<i>should be?</i>) a red flag or anything, but…</p>
-                        <button choice well>Well...?</button>
-                </page>
-                <page well>
-                        <p>I like to imagine my bad luck is like a cat. I’m sure you’ve seen the videos where a cat is near a water glass or something 
-                        breakable and they reach their paw out and everyone in the room is saying ‘no, cat! Don’t do it!’, but then the cat totally does it?</p>
-                        <p><center>That’s what this is like.</center></p>
-                            <button choice um-ok-cool>Um, okay...</button>
-                            <button choice still-no>Yeah I'm good, you're batshit lady...</button>
-                </page>
-                
-                <page still-no>
-                        <p>[[okay then. Read chapter 1 instead]]</p>
+    <div class="container">
+            <div class="row prettyfy">
+            </div>
+        <div class="row">
+            <div class="col-lg-2 col-sm-0"></div>
+            <div class="col-lg-8 col-sm-12 card">
+                <a href="#"><h4 class="text-center">HelloGOODBYEworld.txt</h4></a>
+                <hr class="fp">
+                <h5 class="text-center">7/17/2017 // Earth-771 // Los Angeles, CA by <a href="twitter.html">StatsGurl7</a></h5>
+                <hr class="fp">
+                <!--<div class="fakeimg" style="height:77px; width:1200px;">Image</div>-->
+                <story>
+                    <page intro>
+                        <p>Think of the most unlucky person you’ve ever met.</p>
+                        <button choice okay>Okay</button>
+                        <button choice no>No</button>
                     </page>
+                    <page okay>
+                        <p>Now, think of the most unlucky thing that has ever happened to them.</p>
+                        <button choice like-what>Like What?</button>
+                        <button choice alright>Alright</button>
+                    </page>
+                    <page alright>
+                        <p>There is a 23.3333% chance that person’s bad luck is all my fault.</p>
+                        <button choice how-is-that-possible>What? How is that Possible?</button>
+                    </page>
+                    <page no>
+                        <p>Do it anyway.</p>
+                        <p>I'll wait.</p>
+                        <button choice fine>Fine</button>
+                        <button choice still-no>Still, no</button>
+                    </page>
+                    <page fine>
+                        <p>Good.</p>
+                        <p>Now, think of the most unlucky thing that has ever happened to them.</p>
+                        <button choice why-no>Why?</button>
+                    </page>
+                    <page why-no>
+                            <p>Just humor me.</p>
+                            <button choice seriously-why-no>Seriously, Why?</button>
+                    </page>
+                    <page like-what>
+                        <p>It can be anything.</p>
+                        <p>Maybe they caught the flu the day before their wedding.</p>
+                        <p>Maybe they lost all their money in a casino or at a race track.</p>
+                        <p>Or maybe they got into a plane crash.</p>
+                        <p>...With no survivors.</p>
+                        <button choice wait-what>Wait...what?</button>
+                    </page>
+                    <page wait-what>
+                            <p>That last one might be a little too hard to think about.</p>
+                            <p>Especially considering what I’m about to tell you.</p>
+                            <button choice seriously-why-no>what is it?</button>
+                            <button choice still-no>No. Don't tell me. I don't want to know.</button>
+                    </page>
+                    <page seriously-why-no>
+                        <p>Cause there is a 23.3333% chance that person’s bad luck is all my fault.</p>
+                        <button choice how-is-that-possible>Wait. How is that possible?</button>
+                    </page>
+                    <page how-is-that-possible>
+                        <p><center>Nice to meet you, stranger.</p>
+                        <p>I'm Rhine Tseng.</p>
+                        <p>And I am the most unlucky person on the planet</center></p>
+                        <button choice are-you-serious>You can't be serious.</button>
+                    </page>
+                    <page are-you-serious>
+                        <p>Chances are when you think of the most unlucky person you know, you’re thinking of someone who has bad stuff happen to them on occasion. 
+                        Maybe they’ve locked their keys in their car four or five times. Maybe they can’t fill out an online form without having to call customer service 
+                        each and every time.</p>
 
-            </story>
+                        <p>Maybe they can never log in to their social media accounts without having to change their password. 
+                            No matter if they’ve saved said password in a password manager or whatever.</p>
+                                
+                        <p><left>Maybe they always lose every time they try to gamble.</left></p>
+                                
+                        <p>I don’t know who you’re thinking of or why you chose that person in particular. I just know my ‘bad luck’ is nothing like that at all.</p>
+                        <button choice w-t-f>What the hell are you even talking about?</button>
+                    </page>
+                    <page w-t-f>
+                        <p><center>I like to imagine that my luck has a mind of its own.</p>
+                        <p>Because, to be honest? It probably does.</p>
+                        <p><left>Everyone is always going on and on about ‘lady luck’ or whatever.</left></p>
+                        <p>So I have to assume there’s also a lady bad luck.</p>
+                        <p><left>Or a laddie bad luck?</left></p>
+                        <p>(Equal opportunity and feminism and all that)</p></center></p>
+                            <button choice bullshit>Bullshit.</button>
+                            <button choice sure-jan>Suuuure, Jan.</button>
+                    </page>
+                    <page bullshit>
+                            <p>Wow, rude</p>
+                                <button choice intro>You're rude</button>
+                    </page>
+                    <page sure-jan>
+                        <p>Anyways, all this to say:</p>
+                            <p>My ‘bad luck’ is more than just bad.</p>
+                            <p>It’s sentient.</p>
+                            <button choice are-you-ok>Are you okay?</button>
+                    </page>
+                    <page are-you-ok>
+                        <p>I <i>know</i> how weird that sounds. Especially to someone who has no idea who I am or what I’m even talking about, but...my bad luck is alive. 
+                            It doesn’t speak to me or tell me to do bad things or anything that would be (<i>should be?</i>) a red flag or anything, but…</p>
+                            <button choice well>Well...?</button>
+                    </page>
+                    <page well>
+                            <p>I like to imagine my bad luck is like a cat. I’m sure you’ve seen the videos where a cat is near a water glass or something 
+                            breakable and they reach their paw out and everyone in the room is saying ‘no, cat! Don’t do it!’, but then the cat totally does it?</p>
+                            <p><center>That’s what this is like.</center></p>
+                                <button choice um-ok-cool>Um, okay...</button>
+                                <button choice still-no>Yeah I'm good, you're batshit lady...</button>
+                    </page>
+                    
+                    <page still-no>
+                            <p>[[okay then. Read chapter 1 instead]]</p>
+                        </page>
+
+                </story>
+            </div>
+            <div class="col-lg-2 col-sm-0"></div>
+        </div>
     </div>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+    crossorigin="anonymous"></script>
 </body>
