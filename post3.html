@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Rhinoverse V1 by Desdemona Wren">
+    <meta name="author" content="Rhinoverse by Desdemona Wren">
+
+    <title>Welcome to the Rhinoverse 1.0</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/coliff/bootstrap-rfs/bootstrap-rfs.css">
+
+<style>
+body {background-color: black;
+}
+
+ /* unvisited link */
+ a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: #fff;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: red;
+} 
+
+button {
+  background-color: #8B0000;
+  border: 2px;
+  border-color: #FF0000;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.buttonright {
+  background-color: #8B0000;
+  border: 2px;
+  border-color: #FF0000;
+  border-radius: 10px;
+  color: #fff;
+  padding: 1em;
+  margin-left: .5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 12px;
+}
+
+button:disabled{
+    background-color:grey;
+}
+
+.css-typing {
+  font-family: "Courier";
+  font-size: 14px;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Thick red border */
+hr.fp {
+  border: 1px solid #6e6f80;
+}
+
+body {
+  font-family: 'lucida console';
+  color: white;
+  /* padding: 1%; */
+  background: #000;
+}
+
+/* Header/Blog Title */
+.header {
+  /* padding: 3%; */
+  font-size: 1.25em;
+  text-align: center;
+  background: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #000;
+  /* width: 100%; */
+  /* padding: 20px; */
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: black;
+  padding: 2.5em;
+  /* margin-top: 7%; */
+  /* margin-left:5%; */
+  /* width:70%; */
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  text-align: left;
+}
+
+.h2 {
+  text-align:center;
+  font-size: 1.25em;
+}
+
+/* Social media container */
+.social {
+  background-color: black;
+  text-align: center;
+  /* padding: 20px; */
+  /* width: 98%; */
+  height: 77px;
+  /* margin-top: 20px; */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #000;
+  margin-top: 20px;
+}
+
+.prettyfy {
+    padding: 2em;
+}
+
+/* .whytho { */
+    /* padding: 0em; */
+/* } */
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+/* @media screen and (max-width: 800px) { */
+  /* .leftcolumn, .rightcolumn { */
+    /* width: 100%; */
+    /* padding: 0; */
+  /* } */
+/* } */
+
+</style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+    <script>
+    angular.module("cyo", [])
+
+.directive("story", function() {
+    return {
+        restrict: "EA",
+        scope: true,
+        controller: "StoryController",
+    }
+})
+
+.directive("page", function() {
+    return {
+        restrict: "EA",
+        scope: true,
+        controller: "PageController",
+    }
+})
+
+.directive("choice", function() {
+    return {
+        restrict: "EAC",
+        controller: "ChoiceController",
+    }
+})
+
+.directive("event", function() {
+    return {
+        restrict: "EA",
+        // scope: true,
+        controller: "EventController",
+    }
+})
+
+.directive("condition", function() {
+    return {
+        restrict: "EA",
+        controller: "ConditionController",
+    }
+})
+
+.directive("restart", function() {
+    return {
+        restrict: "EA",
+        scope: true,
+        controller: "RestartController",
+    }
+})
+
+
+.controller("StoryController", function($scope, $element) {
+
+    $scope.storyEvents = [];
+    $scope.choices = [];
+    $scope.pages = [];
+    $scope.completedPages = [];
+    $scope.decisions = ['intro'];
+
+    // $scope. = function() {
+    // console.log("Init story...");
+    // }
+
+    // $scope.
+
+    // $scope.init();
+})
+
+.controller("PageController", function($scope, $attrs, $element) {
+
+    if ($scope.pages.length) {
+        $element.css("display", "none");
+    } else {
+        $scope.isFirstPage = true;
+    }
+
+    var pageName = Object.keys($attrs.$attr);
+    if (pageName[0] == "page") pageName.shift();
+
+    $scope.pageName = pageName[0];
+
+    $scope.pages.push(pageName[0]);
+
+    // $scope.isComplete = false;
+
+    $scope.$watch("decisions", function() {
+        if ($scope.decisions.indexOf($scope.pageName) > -1) {
+            $element.css("display", "block");
+        } else if (!$scope.isFirstPage) {
+            $element.css("display", "none");
+        }
+    }, true);
+})
+
+.controller("ChoiceController", function($scope, $attrs, $element) {
+
+    var choiceName = Object.keys($attrs.$attr);
+    if (choiceName[0] === "choice") choiceName.shift();
+
+    angular.element($element).on("click", function() {
+        $scope.completedPages.push($scope.pageName);
+        $scope.decisions.push(choiceName[0]);
+        $scope.$apply();
+    });
+
+    $scope.$watch("pages", function() {
+        if ($scope.pages.indexOf(choiceName[0]) == -1) {
+            console.error("A choice has no corresponding page,", choiceName[0]);
+            $element.css("border", "2px solid red");
+            $element.css("pointer-events", "none");
+        }
+    }, true);
+
+    $scope.$watch("completedPages", function() {
+        if ($scope.completedPages.indexOf($scope.pageName) > -1) {
+            $element.css("display", "none");
+        } else {
+            $element.css("display", "inline-block");
+        }
+    }, true)
+})
+
+.controller("RestartController", function($scope, $attrs, $element) {
+
+    angular.element($element).on("click", function() {
+        [$scope.storyEvents, $scope.decisions, $scope.completedPages].forEach(function(A) {
+            while (A.length > 0) {
+                A.pop();
+            }
+        });
+
+        $scope.$apply();
+    });
+})
+
+
+.controller("EventController", function($scope, $attrs) {
+    var storyEvent = Object.keys($attrs.$attr);
+    var isNegative = false;
+    if (storyEvent[0] === "clear") {
+        isNegative = true;
+        storyEvent.shift();
+    };
+
+    var activated = false;
+
+    function activate() {
+        if (activated) return;
+        activated = true;
+        if ($scope.isCondition && !$scope.conditionValid) {
+            return;
+        };
+
+        console.info("Activating this event", storyEvent, !isNegative);
+
+        if (!isNegative) {
+            $scope.storyEvents.push(storyEvent[0]);
+        } else {
+            var index = $scope.storyEvents.indexOf(storyEvent[0]);
+            $scope.storyEvents.splice(index, 1);
+        };
+    }
+
+    $scope.$watch("decisions", function() {
+        if ($scope.decisions.indexOf($scope.pageName) > -1) {
+            activate();
+        } else {
+            activated = false;
+        }
+    }, true);
+})
+
+.controller("ConditionController", function($scope, $element, $attrs) {
+    $element.css("display", "none");
+    var condition = Object.keys($attrs.$attr);
+    var isNegative = false;
+    var activated = false;
+
+    $scope.isCondition = true;
+
+    if (condition[0] === "unless" || condition[0] === "not") {
+        isNegative = true;
+        condition.shift();
+    };
+
+    function activate() {
+        if (activated) return;
+        activated = true;
+        if ($scope.storyEvents.indexOf(condition[0]) > -1 && !isNegative) {
+            $scope.conditionValid = true;
+            $element.css("display", "block");
+        } else if ($scope.storyEvents.indexOf(condition[0]) == -1 && isNegative) {
+            $scope.conditionValid = true;
+            $element.css("display", "block");
+        }
+    }
+
+    $scope.$watch("decisions", function() {
+        if ($scope.decisions.indexOf($scope.pageName) > -1) {
+            activate();
+        } else {
+            activated = false;
+            $element.css("display", "none");
+        }
+    }, true);
+});
+
+    </script>
+
+</head>
+
+<body ng-app="cyo">
+
+    <div class="container">
+            <div class="row prettyfy">
+            </div>
+        <div class="row">
+            <div class="col-lg-2 col-sm-0"></div>
+            <div class="col-lg-8 col-sm-12 card">
+                <a href="#"><h4 class="text-center">AFormalApology.txt</h4></a>
+                <hr class="fp">
+                <h5 class="text-center">3/15/2015 // Earth-771 // New York, NY by <a href="https://twitter.com/StatsGurl17">StatsGurl7</a></h5>
+                <hr class="fp">
+                <!--<div class="fakeimg" style="height:77px; width:1200px;">Image</div>-->
+                        <p>I’m sure by now all (zero) of you have seen the news of the pipe bursting at UCLA.</p>
+                        <p>And for all (zero) of you wondering…</p>
+                        <p>Yeah.</p>
+                        <p align="right">That was me.</p>
+                                         
+                        <p><center>And I, Rhine Tseng, would like to issue a formal apology</p>
+                        <p>to literally everyone on this planet for my continued existence</p>
+                        <p>and the insane amount of bad luck I cause simply by breathing.</p>
+                        <p>I am so sorry.</p>
+                        <p>I really, truly am.</center></p>
+                            
+                        <p>I’m not proud of this. At all. Not my finest moment. But I was just trying to get a damn education. 
+                            I don’t know why everything in this world has to be so fucking hard.</p>
+
+                        <p>Can I just get my degree so I can fuck off into the sun please?</p>
+
+                        <p align="right">That would make everything so much easier.</p>
+
+                        <p>Honestly, I have no idea why I’m trying so hard to be someone. All I do is endanger everyone around me every time I walk outside.</p>
+
+                    
+                        <p><center>I feel so fucking selfish.</center></p>
+                            
+                        <p>I can’t seem to exist in a world where I’m alone and everyone else on the planet is safe.</p>
+                            
+                        <p>Why is life so fucking hard?</p>
+                            <p align="right">—<a href="https://twitter.com/statsgurl17">StatsGurl7</a></p>
+                            <br>
+                            <br>
+                            <p align="right">&#187;<a href="https://www.patreon.com/posts/32339589">Continue to Chapter Three</a></p>
+            </div>
+            <div class="col-lg-2 col-sm-0"></div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
+    crossorigin="anonymous"></script>
+</body>
